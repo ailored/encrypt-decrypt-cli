@@ -1,4 +1,5 @@
 from Crypto import Random
+import os
 
 
 def generate_key(key_size: int) -> bytes:
@@ -11,6 +12,9 @@ def save_key_to_file(key: bytes, filename: str):
 
 
 def main():
+    if not os.path.exists('key'):
+        os.makedirs('key')
+
     key_size: int = 16
     keyfile_location: str = 'key/encryption_key.bin'
 
