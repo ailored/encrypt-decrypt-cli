@@ -1,0 +1,5 @@
+.idea
+
+venv/
+key/encryption_key.bin
+data/encrypted_data.bin
